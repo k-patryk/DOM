@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formularz</title>
+		<style>
+			.error {
+				color: red;
+			}
+			#myForm {
+				background-color: #ebffef;
+				padding: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<form id="myForm" onsubmit="return validate()">
+			<label for="name">Imię i nazwisko:</label>
+			<input type="text" id="name" name="name" /><br /><br />
+
+			<label for="email">Adres e-mail:</label>
+			<input type="text" id="email" name="email" /><br /><br />
+
+			<input type="checkbox" id="allConsents" onclick="toggleConsents()" />
+			<label for="allConsents">Wszystkie zgody</label><br /><br />
+
+			<input type="checkbox" id="marketingConsent1" name="marketingConsent1" />
+			<label for="marketingConsent1">Zgoda marketingowa 1</label><br />
+
+			<input type="checkbox" id="marketingConsent2" name="marketingConsent2" />
+			<label for="marketingConsent2">Zgoda marketingowa 2</label><br /><br />
+
+			<input type="submit" value="Wyślij" />
+		</form>
+
+		<ul id="errorList" class="error"></ul>
+
+		<script src="5-walidacja-formularza-zapisu-do-newslettera.js"></script>
+	</body>
+</html>
